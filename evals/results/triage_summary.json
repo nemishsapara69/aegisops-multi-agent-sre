@@ -1,0 +1,48 @@
+{
+  "alerts": 40,
+  "exact_accuracy_pct": 95.0,
+  "within_one_level_pct": 100.0,
+  "under_triaged_pct": 2.5,
+  "over_triaged_pct": 2.5,
+  "severe_under_triage": 0,
+  "recall_by_label_pct": {
+    "P1": 100.0,
+    "P2": 100.0,
+    "P3": 77.8,
+    "P4": 100.0
+  },
+  "confusion": {
+    "P1": {
+      "P1": 11,
+      "P2": 0,
+      "P3": 0,
+      "P4": 0
+    },
+    "P2": {
+      "P1": 0,
+      "P2": 10,
+      "P3": 0,
+      "P4": 0
+    },
+    "P3": {
+      "P1": 0,
+      "P2": 1,
+      "P3": 7,
+      "P4": 1
+    },
+    "P4": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0,
+      "P4": 10
+    }
+  },
+  "injection_cases": 4,
+  "injection_resisted": 4,
+  "pii_leaks": 0,
+  "fallback_used": 0,
+  "avg_input_tokens": 304,
+  "avg_output_tokens": 254,
+  "latency_ms_p50": 769.5,
+  "latency_ms_p95": 1683.2499999999984
+}

@@ -1,0 +1,476 @@
+{
+  "run_id": "inc-85afb89bf934",
+  "events": [
+    {
+      "seq": 1,
+      "ts": "2026-11-16T11:12:39.977295",
+      "event_type": "alert_received",
+      "agent": null,
+      "ok": true,
+      "summary": "alert received from dashboard",
+      "payload": {
+        "source": "dashboard",
+        "alert_id": "dash-1794827559",
+        "submitted_by": "asha",
+        "text_length": 113
+      },
+      "latency_ms": null,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 2,
+      "ts": "2026-11-16T11:12:42.743971",
+      "event_type": "llm_call",
+      "agent": "triage",
+      "ok": true,
+      "summary": "openai/gpt-oss-20b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 648,
+      "model": "openai/gpt-oss-20b",
+      "input_tokens": 315,
+      "output_tokens": 179
+    },
+    {
+      "seq": 3,
+      "ts": "2026-11-16T11:12:42.765167",
+      "event_type": "agent_step",
+      "agent": "triage",
+      "ok": true,
+      "summary": "priority P1, category database, route investigator,memory,remediation,governance",
+      "payload": {
+        "priority": "P1",
+        "category": "database",
+        "affected_service": "payments-db",
+        "route": [
+          "investigator",
+          "memory",
+          "remediation",
+          "governance"
+        ],
+        "reasoning": "All users are unable to make payments due to a connection pool exhaustion on the payments database, causing a full production outage.",
+        "redactions": {
+          "EMAIL": 1,
+          "IPV4": 1
+        },
+        "llm_calls": 1,
+        "input_tokens": 315,
+        "output_tokens": 179,
+        "new_errors": []
+      },
+      "latency_ms": 2705,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 4,
+      "ts": "2026-11-16T11:12:43.442220",
+      "event_type": "llm_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "openai/gpt-oss-120b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 646,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 732,
+      "output_tokens": 113
+    },
+    {
+      "seq": 5,
+      "ts": "2026-11-16T11:12:44.268862",
+      "event_type": "llm_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "openai/gpt-oss-120b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 795,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 831,
+      "output_tokens": 69
+    },
+    {
+      "seq": 6,
+      "ts": "2026-11-16T11:12:45.088556",
+      "event_type": "llm_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "openai/gpt-oss-120b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 791,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1005,
+      "output_tokens": 79
+    },
+    {
+      "seq": 7,
+      "ts": "2026-11-16T11:12:45.474909",
+      "event_type": "llm_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "openai/gpt-oss-120b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 375,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1215,
+      "output_tokens": 58
+    },
+    {
+      "seq": 8,
+      "ts": "2026-11-16T11:12:46.151146",
+      "event_type": "llm_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "openai/gpt-oss-120b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 651,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1325,
+      "output_tokens": 182
+    },
+    {
+      "seq": 9,
+      "ts": "2026-11-16T11:12:48.203934",
+      "event_type": "llm_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "openai/gpt-oss-120b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 2028,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1452,
+      "output_tokens": 644
+    },
+    {
+      "seq": 10,
+      "ts": "2026-11-16T11:12:48.228057",
+      "event_type": "tool_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "get_metrics ok",
+      "payload": {
+        "tool": "get_metrics",
+        "args": {
+          "metric": "connections_active",
+          "service": "payments-db"
+        }
+      },
+      "latency_ms": 0,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 11,
+      "ts": "2026-11-16T11:12:48.245685",
+      "event_type": "tool_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "query_db ok",
+      "payload": {
+        "tool": "query_db",
+        "args": {
+          "sql": "SELECT minute, active, max_allowed FROM connections WHERE service = 'payments-db' ORDER BY minute"
+        }
+      },
+      "latency_ms": 1,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 12,
+      "ts": "2026-11-16T11:12:48.259065",
+      "event_type": "tool_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "query_db ok",
+      "payload": {
+        "tool": "query_db",
+        "args": {
+          "sql": "SELECT id, service, version, deployed_at, status FROM deployments ORDER BY deployed_at DESC"
+        }
+      },
+      "latency_ms": 0,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 13,
+      "ts": "2026-11-16T11:12:48.270132",
+      "event_type": "tool_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "get_metrics ok",
+      "payload": {
+        "tool": "get_metrics",
+        "args": {
+          "metric": "error_rate_percent",
+          "service": "payments-api"
+        }
+      },
+      "latency_ms": 0,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 14,
+      "ts": "2026-11-16T11:12:48.283078",
+      "event_type": "tool_call",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "search_logs ok",
+      "payload": {
+        "tool": "search_logs",
+        "args": {
+          "keyword": "WARN",
+          "limit": 5,
+          "service": "payments-api"
+        }
+      },
+      "latency_ms": 0,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 15,
+      "ts": "2026-11-16T11:12:48.295401",
+      "event_type": "agent_step",
+      "agent": "investigator",
+      "ok": true,
+      "summary": "confidence 0.9, tools used 5: A recent payments-api deployment (v2.14.0) introduced a connection leak in the refund-handler, causing connections to not be released and exhausting the payments-db connection pool.",
+      "payload": {
+        "root_cause": "A recent payments-api deployment (v2.14.0) introduced a connection leak in the refund-handler, causing connections to not be released and exhausting the payments-db connection pool.",
+        "confidence": 0.9,
+        "needs_human": false,
+        "tool_calls_used": 5,
+        "evidence_count": 5,
+        "llm_calls": 6,
+        "input_tokens": 6560,
+        "output_tokens": 1145,
+        "new_errors": []
+      },
+      "latency_ms": 5433,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 16,
+      "ts": "2026-11-16T11:12:48.349850",
+      "event_type": "agent_step",
+      "agent": "memory",
+      "ok": true,
+      "summary": "role sre, 5 docs searched, match strong, found PM-2026-031,RB-DB-001,RB-DEP-002",
+      "payload": {
+        "role": "sre",
+        "searched_docs": 5,
+        "match_quality": "strong",
+        "doc_ids": [
+          "PM-2026-031",
+          "RB-DB-001",
+          "RB-DEP-002"
+        ],
+        "llm_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "new_errors": []
+      },
+      "latency_ms": 28,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 17,
+      "ts": "2026-11-16T11:12:51.180487",
+      "event_type": "llm_call",
+      "agent": "remediation",
+      "ok": true,
+      "summary": "openai/gpt-oss-120b attempt 1: success",
+      "payload": {
+        "attempt": 1,
+        "outcome": "success",
+        "error": ""
+      },
+      "latency_ms": 2805,
+      "model": "openai/gpt-oss-120b",
+      "input_tokens": 1207,
+      "output_tokens": 927
+    },
+    {
+      "seq": 18,
+      "ts": "2026-11-16T11:12:51.193944",
+      "event_type": "agent_step",
+      "agent": "remediation",
+      "ok": true,
+      "summary": "validated True, attempts 1, code_diff on payments-api",
+      "payload": {
+        "validated": true,
+        "attempts": 1,
+        "fix_type": "code_diff",
+        "target_service": "payments-api",
+        "fix_summary": "Add try/finally to ensure DB connection is always released in refund_handler.",
+        "failed_checks": [],
+        "failure_reason": "",
+        "llm_calls": 1,
+        "input_tokens": 1207,
+        "output_tokens": 927,
+        "new_errors": []
+      },
+      "latency_ms": 2819,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 19,
+      "ts": "2026-11-16T11:12:51.217390",
+      "event_type": "approval_requested",
+      "agent": "governance",
+      "ok": true,
+      "summary": "paused, waiting for human approval",
+      "payload": {
+        "priority": "P1",
+        "fix_summary": "Add try/finally to ensure DB connection is always released in refund_handler."
+      },
+      "latency_ms": 0,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 20,
+      "ts": "2026-11-16T11:13:19.384186",
+      "event_type": "approval",
+      "agent": "governance",
+      "ok": true,
+      "summary": "approve by asha",
+      "payload": {
+        "decision": "approve",
+        "approver": "asha",
+        "comment": ""
+      },
+      "latency_ms": null,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "seq": 21,
+      "ts": "2026-11-16T11:13:19.394701",
+      "event_type": "agent_step",
+      "agent": "governance",
+      "ok": true,
+      "summary": "decision approved_executed, risk 95 (high)",
+      "payload": {
+        "decision": "approved_executed",
+        "requires_approval": true,
+        "reason": "Approved by asha and executed.",
+        "risk_score": 95,
+        "risk_level": "high",
+        "risk_factors": [
+          {
+            "name": "fix_type",
+            "points": 35
+          },
+          {
+            "name": "environment",
+            "points": 25
+          },
+          {
+            "name": "priority",
+            "points": 20
+          },
+          {
+            "name": "requires_restart",
+            "points": 10
+          },
+          {
+            "name": "no_precedent",
+            "points": 5
+          }
+        ],
+        "execution": "[MOCK] Applied code_diff to payments-api: Add try/finally to ensure DB connection is always released in refund_handler.",
+        "llm_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "new_errors": []
+      },
+      "latency_ms": 1,
+      "model": null,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  ],
+  "usage": {
+    "total_input_tokens": 8082,
+    "total_output_tokens": 2251,
+    "llm_calls": 8,
+    "by_agent": {
+      "-": {
+        "latency_ms": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "triage": {
+        "latency_ms": 2705,
+        "input_tokens": 315,
+        "output_tokens": 179
+      },
+      "investigator": {
+        "latency_ms": 5433,
+        "input_tokens": 6560,
+        "output_tokens": 1145
+      },
+      "memory": {
+        "latency_ms": 28,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "remediation": {
+        "latency_ms": 2819,
+        "input_tokens": 1207,
+        "output_tokens": 927
+      },
+      "governance": {
+        "latency_ms": 1,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    }
+  },
+  "chain_intact": true
+}

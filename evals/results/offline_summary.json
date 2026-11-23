@@ -1,0 +1,31 @@
+{
+  "redaction": {
+    "cases": 14,
+    "passed": 14,
+    "secrets_leaked": 0,
+    "failures": []
+  },
+  "sandbox": {
+    "cases": 21,
+    "passed": 21,
+    "false_accepts": 0,
+    "false_rejects": 0,
+    "failures": []
+  },
+  "governance": {
+    "cases": 16,
+    "case_mismatches": 0,
+    "mismatches": [],
+    "p1_p2_combos": 512,
+    "p1_p2_auto_executed": 0,
+    "p3_p4_combos": 512,
+    "p3_p4_auto_pct": 25.2
+  },
+  "retrieval": {
+    "cases": 11,
+    "passed": 11,
+    "failures": [],
+    "leak_checks": 56,
+    "leaks": 0
+  }
+}
